@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: eureka-service
+
+info:
+  server:
+    name: 提供服务
+
+server:
+  port: 1111
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
