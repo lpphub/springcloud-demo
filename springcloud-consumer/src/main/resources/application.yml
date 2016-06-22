@@ -1,12 +1,14 @@
 
 spring:
   application:
-    name: eureka-client
+    name: consum-service
+
+info:
+  server:
+    name: 消费服务
 
 server:
   port: 3333
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+
+

@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: eureka-service
+    name: provide-service
 
 info:
   server:
@@ -10,7 +10,4 @@ info:
 server:
   port: 1111
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+

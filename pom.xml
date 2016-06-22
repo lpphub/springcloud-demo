@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>springcloud-config</module>
         <module>springcloud-eureka-server</module>
         <module>springcloud-provider</module>
         <module>springcloud-consumer</module>

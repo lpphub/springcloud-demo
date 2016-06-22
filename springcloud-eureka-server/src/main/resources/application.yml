@@ -6,12 +6,3 @@ spring:
 server:
   port: 8761
 
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka/
-#  server:
-#    enableSelfPreservation: false
-#    waitTimeInMsWhenSyncEmpty: 0

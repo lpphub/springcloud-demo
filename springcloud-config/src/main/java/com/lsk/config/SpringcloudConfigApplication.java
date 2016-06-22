@@ -1,17 +1,17 @@
-package com.lsk.test;
+package com.lsk.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
-public class Application {
+@EnableConfigServer
+public class SpringcloudConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-        System.out.println("Service Consumer start...");
+        SpringApplication.run(SpringcloudConfigApplication.class, args);
+        System.out.println("Config Server start...");
     }
 }
