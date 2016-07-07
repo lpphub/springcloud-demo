@@ -1,0 +1,24 @@
+info:
+  server:
+    name: api-gateway
+
+server:
+  port: 8008
+
+zuul:
+  ignored-services: "*"
+  routes:
+    user:
+      path: /user/**
+      serviceId: user-service
+      # url: http://localhost:8080
+    book:
+      path: /book/**
+      serviceId: book-service
+
+# eureka服务注册配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+

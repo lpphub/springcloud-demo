@@ -1,5 +1,0 @@
-# eureka服务注册配置
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
