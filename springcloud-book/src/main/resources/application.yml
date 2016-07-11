@@ -5,16 +5,6 @@ info:
 server:
   port: 2222
 
-# 此处是获取远程配置服务的配置数据, 这里因为注册服务到eureka,所以获取远程配置也从eureka发现服务
-spring:
-  cloud:
-    config:
-      name: foo
-#      uri: http://localhost:8888
-      discovery:
-        enabled: true
-        service-id: config-server
-
 # eureka服务注册配置
 eureka:
   client:
