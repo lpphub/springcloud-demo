@@ -1,3 +1,31 @@
+
+zuul:
+  ignored-services: "*"
+  routes:
+    user:
+      path: /user/**
+      serviceId: user-service
+      # url: http://localhost:8080
+    book:
+      path: /book/**
+      serviceId: book-service
+
+
+# eureka服务注册配置
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+
 spring:
   application:
     name: api-gateway
+#consul 服务注册
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: false # 是否开启consul的kv配置
+      discovery:
+        health-check-interval: 30s

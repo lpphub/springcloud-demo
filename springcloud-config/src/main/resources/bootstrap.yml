@@ -1,3 +1,26 @@
+
 spring:
   application:
     name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lsk12162015/config-repo
+
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: false # 是否开启consul的kv配置
+#        如果开启配置, 将根据如下配置获取consul的kv --> /v1/kv/test/configserver的value
+#        prefix: test
+#        default-context: configserver
+      discovery:
+        health-check-interval: 30s
+
+# eureka服务注册配置
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/

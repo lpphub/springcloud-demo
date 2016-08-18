@@ -1,13 +1,28 @@
+
 spring:
   application:
     name: book-service
-
-# 此处是获取远程配置服务的配置数据, 这里因为注册服务到eureka,所以获取远程配置也从eureka发现服务
-spring:
   cloud:
     config:
       name: foo
-#      uri: http://localhost:8888
+#      uri: http://localhost:8888  # 此处是获取远程配置服务的配置数据, 这里因为服务被注册,所以获取远程配置通过service-id获取配置服务
       discovery:
         enabled: true
         service-id: config-server
+
+
+    # consul 服务注册
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: false
+      discovery:
+        health-check-interval: 30s
+
+
+# eureka服务注册配置
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/

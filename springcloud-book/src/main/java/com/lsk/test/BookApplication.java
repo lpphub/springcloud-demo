@@ -8,10 +8,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 //@EnableFeignClients
 //@EnableCircuitBreaker
-public class Application {
+public class BookApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(BookApplication.class, args);
         System.out.println("book-service start...");
     }
 }
